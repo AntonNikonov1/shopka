@@ -1,10 +1,12 @@
 import React, { FC, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { IconProps } from '../Icons/Interface'
+
 import styles from './MenuСategory.module.scss'
 
-interface CategoriesListProps {
+export interface CategoriesListProps {
   name: string
-  icon: (color: string) => any
+  icon: (color: string) => FC<IconProps>
   search: string
 }
 
@@ -19,7 +21,7 @@ export const MenuСategory: FC<MenuСategoryProps> = ({ categoriesList }) => {
   useEffect(() => {
     const pathName = categoriesList[activeCategory].search
     router.push(pathName)
-  }, [categoriesList, activeCategory, router])
+  }, [categoriesList, activeCategory])
 
   const changeCategory = (indx: number) => {
     setActiveCategory(indx)

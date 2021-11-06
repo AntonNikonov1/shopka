@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .category {
@@ -24,6 +25,7 @@
 
   &_name {
     font-size: 14px;
+    text-transform: capitalize;
     margin-top: 5px;
   }
 }
