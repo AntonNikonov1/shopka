@@ -1,0 +1,35 @@
+.search_wrapper {
+  position: relative;
+  display: inline-block;
+  width: auto;
+
+  .search_icon {
+    position: absolute;
+    top: 33%;
+    left: 15px;
+    margin: auto 0;
+  }
+
+  .close_icon {
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    margin: auto 0;
+    opacity: 0;
+  }
+
+  .search_input {
+    color: #19191d;
+    font-size: 18px;
+    outline: 0;
+    outline-offset: 0;
+    background: #ededf0;
+    border: none;
+    border-radius: 99px;
+    padding: 15px 45px;
+
+    &:focus + .close_icon {
+      opacity: 1;
+    }
+  }
+}

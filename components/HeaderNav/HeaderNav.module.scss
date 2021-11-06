@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .link {
+    color: #5a5b6a;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &__text {
+      color: #0c2146;
+      font-size: 32px;
+      margin-left: 12px;
+    }
+  }
+
+  .input {
+    width: 30vw;
+  }
+
+  .button_container {
+    display: flex;
+    align-items: center;
+
+    .button {
+      margin-right: 20px;
+    }
+  }
+}
