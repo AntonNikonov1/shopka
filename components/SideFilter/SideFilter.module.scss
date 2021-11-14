@@ -1,5 +1,8 @@
-.filter_icon {
-  margin-right: 20px;
-  display: inline-block;
-  transition: 0.2s;
+.side_filter_container {
+  width: 25%;
+  .filter_icon {
+    margin-right: 20px;
+    display: inline-block;
+    transition: 0.2s;
+  }
 }

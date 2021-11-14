@@ -24,14 +24,18 @@
   border-radius: 4px;
   transition: 0.3s;
   cursor: pointer;
+  width: 100%;
   padding: 8px 12px;
 
   &_outline {
     border: 1px solid #9dc2ff;
 
     &:hover {
-      border-color: transparent;
-      box-shadow: 0 4px 7px rgba(41, 121, 255, 0.4);
+      background-color: #edf4ff;
+
+      // For future
+      // border-color: transparent;
+      // box-shadow: 0 4px 7px rgba(41, 121, 255, 0.4);
     }
   }
 }

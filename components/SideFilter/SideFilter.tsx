@@ -1,31 +1,41 @@
 import React, { useState } from 'react'
 import { Button } from '../Button/Button'
-import { CheckBoxFilter } from '../Filters'
+import { CheckboxFilter } from '../Filters'
 import { FilterIcon } from '../Icons'
 
 import styles from './SideFilter.module.scss'
 
 export const SideFilter = () => {
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false)
 
   const filterHandler = () => {
-    setIsFilterOpen(!isFilterOpen)
+    setIsFiltersOpen(!isFiltersOpen)
   }
-  console.log(`rotate(${isFilterOpen ? 0 : 180}deg)`)
 
   return (
-    <div>
+    <div className={styles.side_filter_container}>
       <Button onClick={filterHandler}>
         <span
           className={styles.filter_icon}
-          style={{ transform: `rotate(${isFilterOpen ? 0 : 180}deg)` }}
+          style={{ transform: `rotate(${isFiltersOpen ? 0 : 180}deg)` }}
         >
           <FilterIcon />
         </span>
         <span>Departments</span>
       </Button>
 
-      <CheckBoxFilter title="Expanded Filters" />
+      {isFiltersOpen && (
+        <>
+          <CheckboxFilter
+            title="Collapsed filters"
+            checkboxNames={['Recommended', 'Recently Added', 'Expiring Soon']}
+          />
+          <CheckboxFilter
+            title="Expanded Filters"
+            checkboxNames={['Recommended', 'Recently Added', 'Expiring Soon']}
+          />
+        </>
+      )}
     </div>
   )
 }

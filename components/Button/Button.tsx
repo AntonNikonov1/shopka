@@ -1,22 +1,7 @@
 import classNames from 'classnames'
 import React, { FC } from 'react'
 import style from './Button.module.scss'
-
-type ButtonTypeProps = 'outline' | 'filled'
-
-interface MarkProps {
-  text: string | number
-  className?: string
-}
-
-interface ButtonProps {
-  onClick?: () => void
-  disabled?: boolean
-  type?: ButtonTypeProps
-  className?: string
-  containerClassName?: string
-  mark?: MarkProps
-}
+import { ButtonProps } from './interface'
 
 export const Button: FC<ButtonProps> = ({
   children,

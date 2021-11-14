@@ -15,7 +15,11 @@
   transition: 0.2s;
   flex: 1;
 
-  &:hover .category_name {
+  &:hover {
+    color: #edf4ff;
+  }
+
+  &:hover + .category_name {
     color: #2979ff;
   }
 

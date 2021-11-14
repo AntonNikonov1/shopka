@@ -1,1 +1,1 @@
-export { CheckBoxFilter } from './components/CheckBoxFilter/CheckBoxFilter'
+export { CheckboxFilter } from './components/CheckboxFilter/CheckboxFilter'
